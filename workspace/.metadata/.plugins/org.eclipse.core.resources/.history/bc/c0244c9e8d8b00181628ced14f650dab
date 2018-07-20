@@ -1,0 +1,5 @@
+package com.example.Register.controllers;
+
+public class UserInfoController {
+
+}

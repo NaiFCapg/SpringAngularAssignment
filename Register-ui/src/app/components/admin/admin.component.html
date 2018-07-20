@@ -1,0 +1,32 @@
+<h2>Check Registered User</h2>
+<div>
+  <label>Search for people: </label>
+  <input [(ngModel)]="search">
+</div>
+
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>phone</th>
+        <th class="text-center">Address</th>
+      </tr>
+      <tr *ngFor="let userInfo of usersInfo">
+        <ng-container *ngIf="userInfo.name.toLowerCase().match(search.toLowerCase())">
+        <td>
+          <a [routerLink]="['/admin/view',userInfo.id]">{{userInfo.name}}</a>
+        </td>
+        <td>
+          {{userInfo.email}}
+        </td>
+        <td>
+          {{userInfo.phone}}
+        </td>
+        <td class="text-center" align = center >
+          {{userInfo.address}}, {{userInfo.city}},{{userInfo.province}}
+        </td>
+        </ng-container>
+      </tr>
+    </table>
+  </div>

@@ -1,0 +1,37 @@
+<div class="container">
+        <div class="row">
+          <a class="btn btn=primary" routerLink="/admin">Back to List</a>
+        </div>
+        <div>
+          <div class="form-group">
+            <label>Name</label>
+            <div class="form-control">{{UserInfo?.name}}</div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <div class="form-control">{{UserInfo?.email}}</div>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <div class="form-control">{{UserInfo?.phone}}</div>
+          </div>
+          <div class="form-group">
+            <label>Address</label>
+            <div class="form-control">
+                {{UserInfo?.address}},{{UserInfo?.city}},{{UserInfo?.province}}
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Post Code</label>
+            <div class="form-control">{{UserInfo?.postCode}}</div>
+          </div>
+          <div class="form-group">
+            <label>Birthday</label>
+            <div class="form-control">{{UserInfo?.birth}}</div>
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="form-control">{{UserInfo?.gender}}</div>
+          </div>
+        </div>
+      </div>
