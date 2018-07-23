@@ -30,8 +30,8 @@
             <select class="form-control" formControlName="province" required>
               <option value="">Please select a Province</option>
               <option *ngFor="let p of provinces"
-                      [value]="p">
-                      {{p}}
+                      [value]="p.province">
+                      {{p.province}}
               </option>
             </select>
           </div>

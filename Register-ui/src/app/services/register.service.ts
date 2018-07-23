@@ -24,4 +24,12 @@ export class RegisterService {
     return this.http.post('/server/api/UsersInfo/register', body, httpOptions)
   }
 
+  getProvinces(){
+    return this.http.get('/server/api/Provinces');
+  }
+
+  createProvince(province){
+    let body = JSON.stringify(province);
+    return this.http.post('/server/api/Provinces/setProvince', body, httpOptions)
+  }
 }

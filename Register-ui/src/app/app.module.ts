@@ -9,13 +9,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
+import { ViewProvincesComponent } from './components/view-provinces/view-provinces.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     HomeComponent,
-    ViewRegistrationComponent
+    ViewRegistrationComponent,
+    ViewProvincesComponent,
+    ViewProvincesComponent
   ],
   imports: [
     BrowserModule,

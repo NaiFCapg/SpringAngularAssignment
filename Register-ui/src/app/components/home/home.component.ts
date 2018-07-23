@@ -9,12 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  provinces: string[] = [
-    'AB',
-    'BC',
-    'ON',
-    //cruently hardcoded
-  ];
+  public provinces;
   genders: string[] = [
     'male',
     'female',
@@ -36,6 +31,7 @@ export class HomeComponent implements OnInit {
       birth: new FormControl('', Validators.required),
       gender: new FormControl()
     })
+    this.getProvinces();
   }
   submitRegistration(){
     if(this.registerform.valid) {
@@ -52,5 +48,13 @@ export class HomeComponent implements OnInit {
     } else{
       this.validMessage = "Please fill out the form before submitting!"
     }
+  }
+
+  getProvinces(){
+    this.registerService.getProvinces().subscribe(
+      data => {this.provinces = data},
+      err => console.error(err),
+      () => this.provinces.sort((a, b) => a.province.localeCompare(b.province))
+    );
   }
 }

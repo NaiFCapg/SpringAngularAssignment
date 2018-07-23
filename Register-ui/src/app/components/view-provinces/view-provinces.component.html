@@ -1,0 +1,16 @@
+<h2>Provinces List</h2>
+
+<div class="container">
+    <table class="table table-bordered table-inverse">
+      <tr>
+        <th>Province</th>
+      </tr>
+      <tr *ngFor="let province of provinces">
+        <td>
+          {{province.province}}
+        </td>
+      </tr>
+    </table>
+</div>
+
+<input [(ngModel)]="addProvince">
